@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/Shivakishore14/My-Cloud/app/console"
-	"github.com/Shivakishore14/My-Cloud/app/model"
+	"github.com/Shivakishore14/My-cloud-core/app/console"
+	"github.com/Shivakishore14/My-cloud-core/app/model"
 
 	lxc "github.com/lxc/go-lxc"
 )

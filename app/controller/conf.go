@@ -3,12 +3,10 @@ package controller
 import (
 	"encoding/json"
 	"fmt"
-	"html/template"
-	"log"
 	"net/http"
 
-	"github.com/Shivakishore14/My-Cloud/app/console"
-	"github.com/Shivakishore14/My-Cloud/app/model"
+	"github.com/Shivakishore14/My-cloud-core/app/console"
+	"github.com/Shivakishore14/My-cloud-core/app/model"
 	//mysql driver
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/gorilla/sessions"
@@ -72,12 +70,4 @@ func webresponse(msg string, err error, data interface{}, w http.ResponseWriter)
 	}
 	fmt.Fprint(w, resTxt)
 	return resTxt, resErr
-}
-
-func displayTemplate(w http.ResponseWriter, templateName string, data interface{}) {
-	var templates = template.Must(template.ParseGlob("templates/*"))
-	if err := templates.ExecuteTemplate(w, templateName, data); err != nil {
-		fmt.Fprint(w, "Error in template")
-		log.Println(err)
-	}
 }

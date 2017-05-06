@@ -15,5 +15,5 @@ func Dashboard(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	displayTemplate(w, "dashboard", nil)
+	//displayTemplate(w, "dashboard", nil)
 }

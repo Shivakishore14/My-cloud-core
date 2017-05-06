@@ -21,6 +21,6 @@ func Settings(w http.ResponseWriter, r *http.Request) {
 
 	vars := mux.Vars(r)
 	name := vars["name"]
-	displayTemplate(w, "settings", nil)
+	//displayTemplate(w, "settings", nil)
 	fmt.Print(name)
 }

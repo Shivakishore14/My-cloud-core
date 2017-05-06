@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"os/exec"
 
-	"github.com/Shivakishore14/My-Cloud/app/console"
-	"github.com/Shivakishore14/My-Cloud/app/model"
+	"github.com/Shivakishore14/My-cloud-core/app/console"
+	"github.com/Shivakishore14/My-cloud-core/app/model"
 )
 
 //CreateContainer : to create a container

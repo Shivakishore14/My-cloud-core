@@ -3,8 +3,8 @@ package routes
 import (
 	"net/http"
 
-	"github.com/Shivakishore14/My-Cloud/app/console"
-	"github.com/Shivakishore14/My-Cloud/app/controller"
+	"github.com/Shivakishore14/My-cloud-core/app/console"
+	"github.com/Shivakishore14/My-cloud-core/app/controller"
 
 	"github.com/gorilla/mux"
 )
@@ -20,8 +20,7 @@ func LoadRoutes() {
 	r.HandleFunc("/listcontainers", controller.ListConatiners)
 	r.HandleFunc("/getstats", controller.GetStatsContainer)
 	r.HandleFunc("/test", controller.Templatetest)
-	r.HandleFunc("/UI/{path}", controller.UITesting)
-	r.PathPrefix("/").Handler(http.FileServer(http.Dir("./static/")))
+	//r.PathPrefix("/").Handler(http.FileServer(http.Dir("./static/")))
 	console.PrintSuccess("Listening on 9090")
 	console.PrintError(http.ListenAndServe(":9090", r))
 }
